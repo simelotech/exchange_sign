@@ -4,7 +4,7 @@ using Lykke.SettingsReader.Attributes;
 namespace Lykke.Service.Skycoin.Sign.Settings
 {
     [UsedImplicitly(ImplicitUseTargetFlags.WithMembers)]
-    public class Skycoin.SignSettings
+    public class SkycoinSignSettings
     {
         public DbSettings Db { get; set; }
     }

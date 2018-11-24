@@ -1,0 +1,13 @@
+language: csharp
+solution: Lykke.Service.Skycoin.Sign.sln 
+
+install:
+  - eval "$(gimme 1.10)"
+  - go version
+
+script:
+    - make test
+
+notifications:
+  email: false
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify

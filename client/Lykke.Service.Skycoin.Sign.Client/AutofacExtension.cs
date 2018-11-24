@@ -13,14 +13,14 @@ namespace Lykke.Service.Skycoin.Sign.Client
     public static class AutofacExtension
     {
         /// <summary>
-        /// Registers <see cref="ISkycoin.SignClient"/> in Autofac container using <see cref="Skycoin.SignServiceClientSettings"/>.
+        /// Registers <see cref="ISkycoinSignClient"/> in Autofac container using <see cref="SkycoinSignServiceClientSettings"/>.
         /// </summary>
         /// <param name="builder">Autofac container builder.</param>
         /// <param name="settings">Skycoin.Sign client settings.</param>
         /// <param name="builderConfigure">Optional <see cref="HttpClientGeneratorBuilder"/> configure handler.</param>
-        public static void RegisterSkycoin.SignClient(
+        public static void RegisterSkycoinSignClient(
             [NotNull] this ContainerBuilder builder,
-            [NotNull] Skycoin.SignServiceClientSettings settings,
+            [NotNull] SkycoinSignServiceClientSettings settings,
             [CanBeNull] Func<HttpClientGeneratorBuilder, HttpClientGeneratorBuilder> builderConfigure)
         {
             if (builder == null)
@@ -28,15 +28,15 @@ namespace Lykke.Service.Skycoin.Sign.Client
             if (settings == null)
                 throw new ArgumentNullException(nameof(settings));
             if (string.IsNullOrWhiteSpace(settings.ServiceUrl))
-                throw new ArgumentException("Value cannot be null or whitespace.", nameof(Skycoin.SignServiceClientSettings.ServiceUrl));
+                throw new ArgumentException("Value cannot be null or whitespace.", nameof(SkycoinSignServiceClientSettings.ServiceUrl));
 
             var clientBuilder = HttpClientGenerator.HttpClientGenerator.BuildForUrl(settings.ServiceUrl)
                 .WithAdditionalCallsWrapper(new ExceptionHandlerCallsWrapper());
 
             clientBuilder = builderConfigure?.Invoke(clientBuilder) ?? clientBuilder.WithoutRetries();
 
-            builder.RegisterInstance(new Skycoin.SignClient(clientBuilder.Create()))
-                .As<ISkycoin.SignClient>()
+            builder.RegisterInstance(new SkycoinSignClient(clientBuilder.Create()))
+                .As<ISkycoinSignClient>()
                 .SingleInstance();
         }
     }

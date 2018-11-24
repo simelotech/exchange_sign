@@ -5,7 +5,7 @@ namespace Lykke.Service.Skycoin.Sign.Client
     /// <summary>
     /// Skycoin.Sign client settings.
     /// </summary>
-    public class Skycoin.SignServiceClientSettings 
+    public class SkycoinSignServiceClientSettings 
     {
         /// <summary>Service url.</summary>
         [HttpCheck("api/isalive")]
