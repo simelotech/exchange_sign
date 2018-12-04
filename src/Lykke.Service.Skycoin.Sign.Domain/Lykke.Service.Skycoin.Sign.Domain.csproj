@@ -6,7 +6,4 @@
   <ItemGroup>
     <PackageReference Include="Lykke.Common" Version="7.0.4" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\contract\Lykke.Job.Skycoin.Sign.Contract\Lykke.Job.Skycoin.Sign.Contract.csproj" />
-  </ItemGroup>
 </Project>
