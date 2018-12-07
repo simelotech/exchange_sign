@@ -10,4 +10,4 @@ script:
 
 notifications:
   email: false
-  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify
+  webhooks: https://fathomless-fjord-24024.herokuapp.com/notify?secret=_t8dmwQKjK8Z0vV28UBx9g
