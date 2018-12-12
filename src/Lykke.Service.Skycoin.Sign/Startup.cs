@@ -31,7 +31,7 @@ namespace Lykke.Service.Skycoin.Sign
                 options.Logs = logs =>
                 {
                     logs.AzureTableName = "Skycoin.SignLog";
-                    logs.AzureTableConnectionStringResolver = settings => settings.Skycoin.SignService.Db.LogsConnString;
+                    logs.AzureTableConnectionStringResolver = settings => settings.SignService.Db.LogsConnString;
 
                     // TODO: You could add extended logging configuration here:
                     /* 
