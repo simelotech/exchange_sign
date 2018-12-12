@@ -6,6 +6,8 @@ install:
   - go version
 
 script:
+    - make install-deps
+    - make install 
     - make test
 
 notifications:
