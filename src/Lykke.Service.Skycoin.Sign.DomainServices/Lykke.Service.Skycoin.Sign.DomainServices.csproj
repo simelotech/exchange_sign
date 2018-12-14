@@ -6,4 +6,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Lykke.Service.Skycoin.Sign.Domain\Lykke.Service.Skycoin.Sign.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Sign\" />
+  </ItemGroup>
 </Project>
