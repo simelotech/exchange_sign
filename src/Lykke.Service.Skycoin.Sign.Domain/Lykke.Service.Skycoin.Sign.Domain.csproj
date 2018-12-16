@@ -4,6 +4,12 @@
     <Version>1.0.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Lykke.Common" Version="7.0.4" />
+    <PackageReference Include="Lykke.Common" Version="7.3.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\client\Lykke.Service.Skycoin.Sign.Client\Lykke.Service.Skycoin.Sign.Client.csproj" />
+    <ProjectReference Include="..\..\contract\Lykke.Service.Skycoin.Sign.Contract\Lykke.Service.Skycoin.Sign.Contract.csproj" />
+    <ProjectReference Include="..\Lykke.Service.Skycoin.Sign.Core\Lykke.Service.Skycoin.Sign.Core.csproj" />
+    <ProjectReference Include="..\..\tests\Lykke.Service.Skycoin.Sign.Tests\Lykke.Service.Skycoin.Sign.Tests.csproj" />
   </ItemGroup>
 </Project>

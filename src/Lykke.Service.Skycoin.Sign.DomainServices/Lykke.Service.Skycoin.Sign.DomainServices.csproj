@@ -9,4 +9,7 @@
   <ItemGroup>
     <Folder Include="Sign\" />
   </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="LibskycoinNet" Version="0.0.1.1-test" />
+  </ItemGroup>
 </Project>
